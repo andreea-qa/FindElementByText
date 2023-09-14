@@ -38,7 +38,7 @@ namespace FindElementByText
             dropDown.SelectByValue("5000");
 
             // Validate the element exists
-            bool isEmailFound = driver.FindElement(By.XPath("//td[text()='noemail@randatmail.com']")).Displayed; 
+            bool isEmailFound = driver.FindElement(By.XPath("//td[text()='r.smith@randatmail.com']")).Displayed; 
             Assert.That(isEmailFound);
 
         }
@@ -59,7 +59,7 @@ namespace FindElementByText
         public void FindElementByTextInEcommerceSite()
         {
             driver.Navigate().GoToUrl("https://ecommerce-playground.lambdatest.io/");
-            driver.FindElement(By.LinkText(" Shop by Category")).Click();
+            driver.FindElement(By.XPath("//a[normalize-space()='Shop by Category']")).Click();
             driver.FindElement(By.XPath("//span[contains(text(),'Components')]")).Click();
             bool isPageLoaded = driver.FindElement(By.XPath("//h1[contains(text(),'Components')]")).Displayed;
             Assert.That(isPageLoaded);
@@ -71,10 +71,8 @@ namespace FindElementByText
             driver.Navigate().GoToUrl(testURL);
             SelectElement dropDown = new SelectElement(driver.FindElement(By.XPath("//select[@class='form-control']")));
             dropDown.SelectByValue("5000");
-
-            // Validate the list of elements contains at least one web element
-            var elements = driver.FindElements(By.XPath("//td[text()='rsmith@randatmail.com']"));
-            Assert.That(elements.Count > 0);
+            bool isEmailFound = driver.FindElement(By.XPath("//td[text()='noemail@randatmail.com']")).Displayed;
+            Assert.That(isEmailFound);
         }
 
         [TearDown]
