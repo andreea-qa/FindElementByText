@@ -10,22 +10,16 @@ For macOS:
 ```
 export LT_USERNAME=LT_USERNAME
 export LT_ACCESS_KEY=LT_ACCESS_KEY
-export HYPEREXECUTE_PLATFORM='windows 10'
-export HYPEREXECUTE_WORKING_DIR='<full_path_project_directory>'
 ```
 For Linux:
 ```
 export LT_USERNAME=LT_USERNAME
 export LT_ACCESS_KEY=LT_ACCESS_KEY
-export HYPEREXECUTE_PLATFORM='windows 10'
-export HYPEREXECUTE_WORKING_DIR='<full_path_project_directory>'
 ```
 For Windows:
 ```
 set LT_USERNAME=LT_USERNAME
 set LT_ACCESS_KEY=LT_ACCESS_KEY
-set HYPEREXECUTE_PLATFORM='windows 10'
-set HYPEREXECUTE_WORKING_DIR='<full_path_project_directory>'
 ```
 
 <h2> Browser  Capabilities </h2>
